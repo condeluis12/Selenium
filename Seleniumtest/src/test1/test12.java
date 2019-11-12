@@ -11,28 +11,19 @@ public class test12 {
 
 	private static WebDriver driver=null;
 	public static void main(String[] args) throws InterruptedException {
-//	public void setup() {
+
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\Administrador\\eclipse-workspace\\Seleniumtest\\driver\\chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 		driver.get("https://www.choucairtesting.com/servicio/");
-		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
-	//}
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id=\"main\"]/div/div/div/div/section[3]/div/div/div[3]/div/div/div/div/div/figure/a/img")).click();
 		Thread.sleep(3000);
-	//public void testgoogle(){
-		//WebElement searchbox= driver.findElement(By.className("elementor-animation-grow attachment-full size-full"));
-		//searchbox.clear();
-		//searchbox.sendKeys("hola mundo");
-		//searchbox.submit();
-		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
-	//}
 		driver.findElement(By.xpath("/html/body/div[2]/div[3]/div/div/div/main/div/div/div/div/section[13]/div/div/div[5]/div/div/div/div/div/figure/a/img")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.className("elementor-button-text")).click();
 		Thread.sleep(3000);
-	//public void teardown() {
+	
 		driver.quit();
 	//}
 }
